@@ -17,6 +17,11 @@ This repository mostly contains:
 - Hypotenuse Calculator (prototype)
 - Basic Calculator (v1)
 
+## Planned Projects
+
+- Mini file handler for all my notes/projects (too lazy to manage them on my own)
+- the weather app (classic every cs guy ahh project)
+
 ## Goal
 
 Learn C++, build cool projects, and document my progress (because i have free will).
