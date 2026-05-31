@@ -1,2 +1,22 @@
-# Cpp-learning
-Learning cpp and making bizarre stuff.
+# Cpp-learning 👽 
+
+Learning C++ and making bizarre stuff.
+
+## About
+
+I'm currently learning C++ from scratch and building weird ideas that i can think of (sometimes maybe good, sometimes maybe shit).
+
+This repository mostly contains:
+- Learning notes
+- Practice programs
+- Experiments
+- Mini-projects
+
+## Current Projects
+
+- Hypotenuse Calculator (prototype)
+- Basic Calculator (v1)
+
+## Goal
+
+Learn C++, build cool projects, and document my progress (because i have free will).
