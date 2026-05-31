@@ -14,7 +14,7 @@ This repository mostly contains:
 
 ## Current Projects
 
-- Hypotenuse Calculator (prototype)
+- Hypotenuse Calculator (finished)
 - Basic Calculator (v1)
 
 ## Planned Projects
