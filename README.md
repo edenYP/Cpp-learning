@@ -15,13 +15,17 @@ This repository mostly contains:
 ## Current Projects
 
 - Hypotenuse Calculator (finished)
-- Basic Calculator (v1)
+- Basic Calculator (v2 finished)
+- Number guessing game (finished)
 
+  
 ## Planned Projects
 
 - Mini file handler for all my notes/projects (too lazy to manage them on my own)
 - the weather app (classic every cs guy ahh project)
-
+- A macro
+- Text to binary converter
+  
 ## Goal
 
 Learn C++, build cool projects, and document my progress (because i have free will).
