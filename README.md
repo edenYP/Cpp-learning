@@ -17,6 +17,7 @@ This repository mostly contains:
 - Hypotenuse Calculator (finished)
 - Basic Calculator (v2 finished)
 - Number guessing game (finished)
+- Banking practice problem (beginner finished)
 
   
 ## Planned Projects
