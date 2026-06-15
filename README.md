@@ -18,7 +18,7 @@ This repository mostly contains:
 - Basic Calculator (v2 finished)
 - Number guessing game (finished)
 - Banking practice problem (beginner finished)
-- finished rock paper scissors in a nutshell.
+- Rock Hard, Paper Cut, Scissor Girlies (finished)
 
   
 ## Planned Projects
