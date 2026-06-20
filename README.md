@@ -27,7 +27,6 @@ This repository mostly contains:
 - Mini file handler for all my notes/projects (too lazy to manage them on my own)
 - the weather app (classic every cs guy ahh project)
 - A macro
-- Text to binary converter
 
   
 ## Goal
