@@ -19,6 +19,7 @@ This repository mostly contains:
 - Number guessing game (finished)
 - Banking practice problem (beginner finished)
 - Rock Hard, Paper Cut, Scissor Girlies (finished)
+- Text to binary converter (Finished)
 
   
 ## Planned Projects
