@@ -10,7 +10,8 @@
 using namespace std;
 
 
-int questions(int i);
+int questions(int i, string answer[3][9]);
+void statistics(int totalmarks, int attempted, int unattempted, int correct, int incorrect);
 
 using namespace std;
 
@@ -18,8 +19,7 @@ using namespace std;
 int main(){
 char response;
 int quiztype;
-
-
+string answer[3][9];
 
 
 cout << "would you like to take a short quiz? y/n" << '\n';
@@ -33,43 +33,23 @@ while(response == 'y'){
     cout << "which quiz would you like to take? [Pick The Number]" << '\n';
     cout << "1: Functions   2: Operators   3:  Previous Projects" << '\n';
     cin >> quiztype;
-
+    cout << "NOTE: type 'SKIP' to skip a question. [CASE SENSITIVE]" << '\n';
     if(quiztype == 1){
         i = 0;
-        questions(i);
+        questions(i, answer);
 
     }
 
     else if(quiztype == 2){
         i = 1;
-        questions(i);
+        questions(i, answer);
 
     }
 
     else if(quiztype == 3){
         i = 2;
-        questions(i);
+        questions(i, answer);
     }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -104,12 +84,51 @@ return 0;
 
 
 
-int questions(int i){
-    string answer;
 
-    string questions[3][9] = {{"What is the purpose of a function in C++?", "What keyword is used for a function that does not return a value?", "What is the difference between a function declaration and a function definition?", "What is a parameter?", "What is an argument?", "What keyword is used to send a value back from a function?", "True or False: A function can call another function.", "What will this function return? \n int add(int a, int b)\n{return = a + b};\n when called with: add(5,3).", "True or False:\n A void function can use cout"},
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+int questions(int i, string answer[3][9]){
+    int totalmarks = 0;
+    int correct = 0;
+    int incorrect = 0;
+    int attempted = 0;
+    int unattempted = 0;
+
+    string questions[3][9] = {{"What is the purpose of a function in C++?", "What keyword is used for a function that does not return a value?", "True or False: \n A function declaration contains the function body.", "What is a parameter?", "What is an argument?", "What keyword is used to send a value back from a function?", "True or False: A function can call another function.", "What will this function return? \n int add(int a, int b)\n{return = a + b};\n when called with: add(5,3).", "True or False:\n A void function can use cout"},
                               {"What operator is used for addition in C++?", "What operator is used to check if two values are equal?", "What is the output of: \n x = 5; \n x++; \n cout << x", "What operator is used to find the remainder after division?", "True or False: \n 10 > 5 evaluates to True.", "What is the output of:\n cout << (10 % 3);", "What logical operator represents AND in C++?", "What is the output of: \n bool result = (5 < 3); \n cout << result;", "Which operator is used for assigning a value to something."},
-                              {"What do you use instead of an Array if you want more flexibility?", "What operator do you use to tell a function to not create a copy of a variable and use that exact variable?", "What do you use to clear cin?", "What are nested loops?", "True or False: \n Do we use Srand function to set a seed?", "True or False: \n A function must return a value if its return type is int.", "What vector function is used to add an element to the end of a vector?", "True or False: \n The size() function can be used to find the number of elements in a vector.", "Which operator is used to access a member function of a vector?"}};
+                              {"What do you use instead of an Array if you want more flexibility?", "What operator do you use to tell a function to not create a copy of a variable and use that exact variable?", "What do you use to clear cin?", "True or False: \n nested loops are simply loops used inside loops?", "True or False: \n Do we use Srand function to set a seed?", "True or False: \n A function must return a value if its return type is int.", "What vector function is used to add an element to the end of a vector?", "True or False: \n The size() function can be used to find the number of elements in a vector.", "Which operator is used to access a member function of a vector?"}};
+
+
+
+
+
+string correctanswers[3][9] = {
+    {"reuse", "void", "false", "placeholder", "value", "return", "true", "8", "true"},
+
+    {"+", "==", "6", "%", "true", "1", "&&", "0", "="},
+
+    {"vector", "&", "cin.ignore(numeric_limits<streamsize>::max(), '\n')", "true", "true", "true", "push_back", "true", "."}
+};
+
+
+
+
+
 
 
 
@@ -119,21 +138,125 @@ int questions(int i){
 
         cout << "question #" << j + 1<< '\n';
         cout << questions[i][j] << '\n';
-        cin >> answer;
+        cin >> answer[i][j];
+
+
+    }    
+
+
+    for(int j = 0; j < 9; j++){
+
+        if(answer[i][j] == "SKIP"){
+            unattempted ++;
+            continue;
+        }
+
+
+
+        if(answer[i][j] == correctanswers[i][j]){
+
+            totalmarks+= 4;
+            correct++;
+            attempted++;
+
+        }
+
+
+
+        else if(answer[i][j].empty()){
+            unattempted++;
+            continue;
+        }
+
+
+
+        else if(answer[i][j] != correctanswers[i][j]){
+            incorrect++;
+            totalmarks--;
+            attempted++;
+        }
+
 
 
     }
 
 
 
-
-
-
-
-    
-
+statistics(totalmarks, attempted, unattempted, correct, incorrect);
 
 
 
     return 0;
+}
+
+
+
+
+
+
+
+
+
+void statistics(int totalmarks, int attempted, int unattempted, int correct, int incorrect){
+
+double percentage = ((double)totalmarks/36)*100;
+char grade;
+
+if(percentage >= 95){
+    grade = 'S';
+}
+else if(percentage >= 90){
+    grade = 'A';
+}
+else if(percentage >= 80){
+    grade = 'B';
+}
+else if(percentage >= 70){
+    grade = 'C';
+}
+else if(percentage >= 60){
+    grade = 'D';
+}
+else{
+    grade = 'F';
+}
+
+
+
+
+
+
+
+cout << '\n' << '\n';
+cout << "--------------------------------------------------------" << '\n';
+cout << "                       Quiz Statistics                      " << '\n';
+cout << "Total attempted questions:" << attempted << '\n';
+cout << "Total unattempted questions:" << unattempted << '\n';
+cout << "Total correct answers:" << correct << '\n';
+cout << "Total incorrect answers:" << incorrect << '\n';
+cout << "--------------------------------------------------------" << '\n';
+cout << "Total marks: " << totalmarks << '\n';
+cout << "Percentage: " << percentage << '\n';
+cout << "Grade: " << grade << '\n';
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 }
