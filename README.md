@@ -20,7 +20,7 @@ This repository mostly contains:
 - Banking practice problem (beginner finished)
 - Rock Hard, Paper Cut, Scissor Girlies (finished)
 - Text to binary converter (Finished)
-
+- Quiz (Finished)
   
 ## Planned Projects
 
