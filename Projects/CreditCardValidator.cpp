@@ -46,7 +46,7 @@ void multiple(int endsum);
 void Calculation(std::string cc);
 
 int main(){
-
+    char enter;
 std::string cc;
 
 std::cout << "Type your credit card number, we no scam promis hehe...." << '\n';
@@ -58,12 +58,8 @@ std::cout << "Checking... No scamming sir! we legit" << '\n';
 Calculation(cc);
 
 
-
-
-
-//                                                      This currently only works for 16 digit cards, will make it work for everything tomorrow morning. goodnight sons and daughters.
-
-
+std::cout << "Enter any key to exit";
+std::cin >> enter;
 
 
 
@@ -125,11 +121,11 @@ multiple(endsum);
 void multiple(int endsum){
 
     if(endsum % 10 == 0){
-        std::cout << "Your cc is valid son, well done. we'll use it wise- I meant to say that we'll take nice care of it!";
+        std::cout << "Your cc is valid son, well done. we'll use it wise- I meant to say that we'll take nice care of it!\n";
     }
 
     if(endsum % 10 != 0){
-        std::cout << "YOU DARE TRY TO PLAY US SON? YOU BETTER LOCK YOUR DOORS AND WINDOWS PROPERLY";
+        std::cout << "YOU DARE TRY TO PLAY US SON? YOU BETTER LOCK YOUR DOORS AND WINDOWS PROPERLY\n";
     }
 
 
