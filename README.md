@@ -21,7 +21,8 @@ This repository mostly contains:
 - Rock Hard, Paper Cut, Scissor Girlies (finished)
 - Text to binary converter (Finished)
 - Quiz (Finished)
-  
+- CreditCardValidator (Finished)
+
 ## Planned Projects
 
 - Mini file handler for all my notes/projects (too lazy to manage them on my own)
