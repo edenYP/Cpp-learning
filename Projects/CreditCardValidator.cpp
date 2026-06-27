@@ -76,30 +76,45 @@ void Calculation(std::string cc){
 
 int endsum = 0;
 
-
 int size = cc.size();
 
-for(int i = size - 2; i >= 0; i-= 2){ // SIZE - 2 because size - 1 = rightmost digit (index son, don't forget very imp)
+for(int i = size - 1; i >= 0; i--){
 
 
-//                                                                                                                                      VERY IMPORTANT TRICK.
-//                                                                                                         ASCII VALUE OF THE NUMBER YOU WANT - ASCII VALUE OF 0 = THE NUMBER YOU WANT
+//                                                                  THIS RIGHT HERE CALCULATES THE DISTANCE FROM RIGHT SIDE. basically if distance is even, we double it. if it's odd we add it normally.
+// EXAMPLE- 
+// Distance: 0 = check digit (don't double)
+// Distance: 1 = double
+// Distance: 2 = don't double
+// Distance: 3 = double
 
-int temp = ((cc[i] -'0')*2);
-if(temp > 9){
-    temp-= 9;
+
+int distance = (size - 1) - i;
+
+if(distance % 2 == 1){
+
+   int temp = ((cc[i] - '0')*2);
+        if(temp > 9){
+            temp -= 9;
+        }
+
+        endsum += temp;
 }
-endsum += temp;
-// BASICALLY, cc[i] is a string, so we subtract '0' from cc[i], (it auto converts two chars to ascii before subtracting them) to get the number in INT. and then we double it then subtract 9 from it if it's greater than 9 and add it in endsum. THEN LOOP IT SON.
+
+
+else if(distance % 2 == 0){
+
+    endsum += cc[i] - '0';
+}
+
+
+
+
+
 
 }
 
-// NOW ADD REMAINING DIGITS.
-
-for(int j = size - 1; j >= 0; j-= 2){
-    endsum+= (cc[j] - '0');
-}
-
+    
 
 
 
