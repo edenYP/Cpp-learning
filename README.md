@@ -22,6 +22,7 @@ This repository mostly contains:
 - Text to binary converter (Finished)
 - Quiz (Finished)
 - CreditCardValidator (Finished)
+- TicTacToe(Finished)
 
 ## Planned Projects
 
@@ -33,3 +34,13 @@ This repository mostly contains:
 ## Goal
 
 Learn C++, build cool projects, and document my progress (because i have free will).
+
+## Tools I Use
+
+- Arch Linux (btw)
+- KDE Plasma
+- VS Code
+- GCC
+- Git
+
+**Honorable mention**: Monster energy
