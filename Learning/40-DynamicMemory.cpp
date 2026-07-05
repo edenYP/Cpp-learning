@@ -15,7 +15,8 @@ int main() {
     std::cout << "Here is your value: " << *pnum << '\n';
 
     delete pnum; // freeing up the memory address that was created for the integer. (if we don't free memory address, it will cause a memory leak.)
-
+    
+    pnum = nullptr;
 
 
 
@@ -44,6 +45,10 @@ int main() {
         std::cout << "Here is your value of element " << i << ": " << parray[i] << '\n'; 
         std::cout << "*************************************" << '\n';
     }
+
+
+    delete[] parray; // freeing up memory
+        parray = nullptr; // setting pointer to null to avoid dangling pointer. (a pointer that points to memory address that has been deleted.)
 
 //  Question i had when learning this: why do we do parray[i] = numbers[i] instead of doing *parray[i] = numbers[i]?
 
