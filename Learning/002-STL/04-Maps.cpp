@@ -143,7 +143,11 @@ std::cout << "Brocode's bankbalance: " << bankbalance["brocode"] << '\n';
 
 
 
+    //                 7: Question: why and how does it store it's elements?
 
+    //              Answer- It stores them in a Red-Black binary tree (self balancing binary tree) which when performing
+    //                      operations almost run in O(log n) time while the keys are sorted.
+                        
 
 
 
