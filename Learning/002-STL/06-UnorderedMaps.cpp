@@ -26,7 +26,7 @@
     locates that eden is stored in bucket 8
 
 -   That's why the average complexity time is O(1).
--   Worst complexity time is O(n) when there are multiple pairs stored at a location. It does a linear search to find the matched pair
+-   Worst complexity time is O(n) when there are multiple pairs stored in the same bucket. It does a linear search to find the matched pair.
 
 
 */
