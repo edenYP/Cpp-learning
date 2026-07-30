@@ -1,5 +1,6 @@
 #include <iostream>
 #include <list>
+#include <iterator>
 
 // std::list is implemented as a doubly linked list.
 
@@ -49,6 +50,39 @@ auto it = numbers.begin();
 std::cout << *it << '\n';
 
 
+
+
+// A LIST IS MADE UP OF NODES:
+/*
+ NODE 1 (address = 2998):
+    value:
+    node* next = 30000;
+    node* prev = nullptr;
+
+ NODE 2 (30000):
+    value:
+    node* next = 29394;
+    node* prev = 2998;
+
+ NODE 3 (address = 29394):
+    value:
+    node* next = nullptr;
+    node* prev = 30000;
+
+
+
+
+    Elements that are stored inside a double linked list are stored inside NODES.
+    - each node's location is completely arbitary.
+    - the pointers of the next and previous nodes are stored inside a node.
+    - A list iterator keeps track of the current node.
+    - When ++it is used, the iterator moves onto the next node which the next ptr is pointing to.
+   
+
+
+- For more info on iterators. Check the Iterator file.
+
+*/
 
 // NOTE: WILL ADD THE FUNCTIONS AFTER LEARNING ITERATORS AS MOST OF THEM ARE ITERATOR-BASED.
 
