@@ -17,7 +17,7 @@ This repository mostly contains:
 - Hypotenuse Calculator (finished)
 - Basic Calculator (v2 finished)
 - Number guessing game (finished)
-- Banking practice problem (beginner finished)
+- Banking practice problem (finished)
 - Rock Hard, Paper Cut, Scissor Girlies (finished)
 - Text to binary converter (Finished)
 - Quiz (Finished)
@@ -26,7 +26,7 @@ This repository mostly contains:
 
 ## Planned Projects
 
-- Mini file handler for all my notes/projects (too lazy to manage them on my own)
+- stage based game.
 - the weather app (classic every cs guy ahh project)
 - A macro
 
@@ -42,5 +42,6 @@ Learn C++, build cool projects, and document my progress (because i have free wi
 - VS Code
 - GCC
 - Git
+- Neovim
 
 **Honorable mention**: Monster energy
