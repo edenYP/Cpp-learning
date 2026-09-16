@@ -60,7 +60,7 @@ int main(){
 
         // Note: you can also pop element at any place by doing this-
 
-        // deque.earse(deque.begin() + 2 ) // this removes element at 3rd spot.  
+        // deque.erase(deque.begin() + 2 ) // this removes element at 3rd spot.  
 
 
 

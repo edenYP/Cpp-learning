@@ -81,6 +81,11 @@ std::cout << "**************************\n";
 
 std::cout << "Seeing what's underneath all that simplicity\n";
 std::cout << "Debunked loop: \n";
+
+
+
+// iterating a list:
+
 for(auto it = BlockResidents.begin(); it != BlockResidents.end(); ++it){
     std::cout << "Resident no: " << i << '\n';
     std::cout << *it << '\n';
