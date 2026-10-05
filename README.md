@@ -41,6 +41,8 @@ Learn C++, build cool projects, and document my progress (because i have free wi
 - KDE Plasma
 - VS Code
 - GCC
+
+tung tung ytuftdyuigy
 - Git
 - Neovim
 
